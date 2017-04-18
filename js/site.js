@@ -18,8 +18,12 @@ sigma.classes.graph.addMethod('hideNames', function() {
 });
 
 var s = new sigma({
-    container : 'container',
-});
+  renderers: [
+    {
+      container: document.getElementById('container'),
+      type: 'canvas'
+    }
+  ]});
 
 sigma.parsers.json(
   'data/data.json',
